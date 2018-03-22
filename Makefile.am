@@ -76,7 +76,9 @@ sbin_PROGRAMS = \
     tools/tpm2_rsadecrypt \
     tools/tpm2_rsaencrypt \
     tools/tpm2_sign \
-    tools/tpm2_unseal
+    tools/tpm2_unseal \
+    tools/tpm2_shutdown \
+    tools/tpm2_da_unlock
 
 noinst_LIBRARIES = $(LIB_COMMON)
 lib_libcommon_a_SOURCES = \
@@ -131,6 +133,8 @@ tools_tpm2_rsadecrypt_SOURCES = tools/tpm2_rsadecrypt.c tools/main.c
 tools_tpm2_rsaencrypt_SOURCES = tools/tpm2_rsaencrypt.c tools/main.c
 tools_tpm2_sign_SOURCES = tools/tpm2_sign.c tools/main.c
 tools_tpm2_unseal_SOURCES = tools/tpm2_unseal.c tools/main.c
+tools_tpm2_shutdown_SOURCES = tools/tpm2_shutdown.c tools/main.c
+tools_tpm2_da_unlock_SOURCES = tools/tpm2_da_unlock.c tools/main.c
 
 # rc_decode does not use common main, since it does not need a dynamic TCTI.
 tools_tpm2_rc_decode_SOURCES = lib/rc-decode.c tools/tpm2_rc_decode.c
